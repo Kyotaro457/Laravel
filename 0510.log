@@ -1,0 +1,659 @@
+kyotaro_IAM:~/environment $ cd work/
+kyotaro_IAM:~/environment/work $ ls
+Animal.php  Dog.php  FizzBuzz.php  Sumnumber.php  getEvennumber.php  input.php  output.php
+kyotaro_IAM:~/environment/work $ composer
+bash: composer: command not found
+kyotaro_IAM:~/environment/work $ mkdir ../laravel
+kyotaro_IAM:~/environment/work $ cf ../laravel
+bash: cf: command not found
+kyotaro_IAM:~/environment/work $ cd ../laravel
+kyotaro_IAM:~/environment/laravel $ php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
+kyotaro_IAM:~/environment/laravel $ php -r "if (hash_file('sha384', 'composer-setup.php') === 'dac665fdc30fdd8ec78b38b9800061b4150413ff2e3b6f88543c636f7cd84f6db9189d43a81e5503cda447da73c7e5b6') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
+Installer verified
+kyotaro_IAM:~/environment/laravel $ php composer-setup.php
+All settings correct for using Composer
+Downloading...
+
+Composer (version 2.7.6) successfully installed to: /home/ec2-user/environment/laravel/composer.phar
+Use it: php composer.phar
+
+kyotaro_IAM:~/environment/laravel $ php -r "unlink('composer-setup.php');"
+kyotaro_IAM:~/environment/laravel $ sudo mv composer.phar /usr/local/bin/composer
+kyotaro_IAM:~/environment/laravel $ composer
+   ______
+  / ____/___  ____ ___  ____  ____  ________  _____
+ / /   / __ \/ __ `__ \/ __ \/ __ \/ ___/ _ \/ ___/
+/ /___/ /_/ / / / / / / /_/ / /_/ (__  )  __/ /
+\____/\____/_/ /_/ /_/ .___/\____/____/\___/_/
+                    /_/
+Composer version 2.7.6 2024-05-04 23:03:15
+
+Usage:
+  command [options] [arguments]
+
+Options:
+  -h, --help                     Display help for the given command. When no command is given display help for the list command
+  -q, --quiet                    Do not output any message
+  -V, --version                  Display this application version
+      --ansi|--no-ansi           Force (or disable --no-ansi) ANSI output
+  -n, --no-interaction           Do not ask any interactive question
+      --profile                  Display timing and memory usage information
+      --no-plugins               Whether to disable plugins.
+      --no-scripts               Skips the execution of all scripts defined in composer.json file.
+  -d, --working-dir=WORKING-DIR  If specified, use the given directory as working directory.
+      --no-cache                 Prevent use of the cache
+  -v|vv|vvv, --verbose           Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug
+
+Available commands:
+  about                Shows a short information about Composer
+  archive              Creates an archive of this composer package
+  audit                Checks for security vulnerability advisories for installed packages
+  browse               [home] Opens the package's repository URL or homepage in your browser
+  bump                 Increases the lower limit of your composer.json requirements to the currently installed versions
+  check-platform-reqs  Check that platform requirements are satisfied
+  clear-cache          [clearcache|cc] Clears composer's internal package cache
+  completion           Dump the shell completion script
+  config               Sets config options
+  create-project       Creates new project from a package into given directory
+  depends              [why] Shows which packages cause the given package to be installed
+  diagnose             Diagnoses the system to identify common errors
+  dump-autoload        [dumpautoload] Dumps the autoloader
+  exec                 Executes a vendored binary/script
+  fund                 Discover how to help fund the maintenance of your dependencies
+  global               Allows running commands in the global composer dir ($COMPOSER_HOME)
+  help                 Display help for a command
+  init                 Creates a basic composer.json file in current directory
+  install              [i] Installs the project dependencies from the composer.lock file if present, or falls back on the composer.json
+  licenses             Shows information about licenses of dependencies
+  list                 List commands
+  outdated             Shows a list of installed packages that have updates available, including their latest version
+  prohibits            [why-not] Shows which packages prevent the given package from being installed
+  reinstall            Uninstalls and reinstalls the given package names
+  remove               [rm|uninstall] Removes a package from the require or require-dev
+  require              [r] Adds required packages to your composer.json and installs them
+  run-script           [run] Runs the scripts defined in composer.json
+  search               Searches for packages
+  self-update          [selfupdate] Updates composer.phar to the latest version
+  show                 [info] Shows information about packages
+  status               Shows a list of locally modified packages
+  suggests             Shows package suggestions
+  update               [u|upgrade] Updates your dependencies to the latest version according to composer.json, and updates the composer.lock file
+  validate             Validates a composer.json and composer.lock
+kyotaro_IAM:~/environment/laravel $ cf ../work/
+bash: cf: command not found
+kyotaro_IAM:~/environment/laravel $ cd ../work/
+kyotaro_IAM:~/environment/work $ composer
+   ______
+  / ____/___  ____ ___  ____  ____  ________  _____
+ / /   / __ \/ __ `__ \/ __ \/ __ \/ ___/ _ \/ ___/
+/ /___/ /_/ / / / / / / /_/ / /_/ (__  )  __/ /
+\____/\____/_/ /_/ /_/ .___/\____/____/\___/_/
+                    /_/
+Composer version 2.7.6 2024-05-04 23:03:15
+
+Usage:
+  command [options] [arguments]
+
+Options:
+  -h, --help                     Display help for the given command. When no command is given display help for the list command
+  -q, --quiet                    Do not output any message
+  -V, --version                  Display this application version
+      --ansi|--no-ansi           Force (or disable --no-ansi) ANSI output
+  -n, --no-interaction           Do not ask any interactive question
+      --profile                  Display timing and memory usage information
+      --no-plugins               Whether to disable plugins.
+      --no-scripts               Skips the execution of all scripts defined in composer.json file.
+  -d, --working-dir=WORKING-DIR  If specified, use the given directory as working directory.
+      --no-cache                 Prevent use of the cache
+  -v|vv|vvv, --verbose           Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug
+
+Available commands:
+  about                Shows a short information about Composer
+  archive              Creates an archive of this composer package
+  audit                Checks for security vulnerability advisories for installed packages
+  browse               [home] Opens the package's repository URL or homepage in your browser
+  bump                 Increases the lower limit of your composer.json requirements to the currently installed versions
+  check-platform-reqs  Check that platform requirements are satisfied
+  clear-cache          [clearcache|cc] Clears composer's internal package cache
+  completion           Dump the shell completion script
+  config               Sets config options
+  create-project       Creates new project from a package into given directory
+  depends              [why] Shows which packages cause the given package to be installed
+  diagnose             Diagnoses the system to identify common errors
+  dump-autoload        [dumpautoload] Dumps the autoloader
+  exec                 Executes a vendored binary/script
+  fund                 Discover how to help fund the maintenance of your dependencies
+  global               Allows running commands in the global composer dir ($COMPOSER_HOME)
+  help                 Display help for a command
+  init                 Creates a basic composer.json file in current directory
+  install              [i] Installs the project dependencies from the composer.lock file if present, or falls back on the composer.json
+  licenses             Shows information about licenses of dependencies
+  list                 List commands
+  outdated             Shows a list of installed packages that have updates available, including their latest version
+  prohibits            [why-not] Shows which packages prevent the given package from being installed
+  reinstall            Uninstalls and reinstalls the given package names
+  remove               [rm|uninstall] Removes a package from the require or require-dev
+  require              [r] Adds required packages to your composer.json and installs them
+  run-script           [run] Runs the scripts defined in composer.json
+  search               Searches for packages
+  self-update          [selfupdate] Updates composer.phar to the latest version
+  show                 [info] Shows information about packages
+  status               Shows a list of locally modified packages
+  suggests             Shows package suggestions
+  update               [u|upgrade] Updates your dependencies to the latest version according to composer.json, and updates the composer.lock file
+  validate             Validates a composer.json and composer.lock
+kyotaro_IAM:~/environment/work $ cd ../laravel/
+kyotaro_IAM:~/environment/laravel $ ls
+kyotaro_IAM:~/environment/laravel $ laravel new blog
+bash: laravel: command not found
+kyotaro_IAM:~/environment/laravel $ cd ../
+kyotaro_IAM:~/environment $ mv laravel framework
+kyotaro_IAM:~/environment $ cd framework/
+kyotaro_IAM:~/environment/framework $ ls
+kyotaro_IAM:~/environment/framework $ composer global require laravel/installer
+Changed current directory to /home/ec2-user/.config/composer
+./composer.json has been created
+Running composer update laravel/installer
+Loading composer repositories with package information
+Updating dependencies
+Lock file operations: 30 installs, 0 updates, 0 removals
+  - Locking carbonphp/carbon-doctrine-types (3.2.0)
+  - Locking doctrine/inflector (2.0.10)
+  - Locking illuminate/collections (v11.7.0)
+  - Locking illuminate/conditionable (v11.7.0)
+  - Locking illuminate/contracts (v11.7.0)
+  - Locking illuminate/filesystem (v11.7.0)
+  - Locking illuminate/macroable (v11.7.0)
+  - Locking illuminate/support (v11.7.0)
+  - Locking laravel/installer (v5.8.0)
+  - Locking laravel/prompts (v0.1.21)
+  - Locking nesbot/carbon (3.3.1)
+  - Locking psr/clock (1.0.0)
+  - Locking psr/container (2.0.2)
+  - Locking psr/simple-cache (3.0.0)
+  - Locking symfony/clock (v7.0.7)
+  - Locking symfony/console (v7.0.7)
+  - Locking symfony/deprecation-contracts (v3.5.0)
+  - Locking symfony/finder (v7.0.7)
+  - Locking symfony/polyfill-ctype (v1.29.0)
+  - Locking symfony/polyfill-intl-grapheme (v1.29.0)
+  - Locking symfony/polyfill-intl-normalizer (v1.29.0)
+  - Locking symfony/polyfill-mbstring (v1.29.0)
+  - Locking symfony/polyfill-php80 (v1.29.0)
+  - Locking symfony/polyfill-php83 (v1.29.0)
+  - Locking symfony/process (v7.0.7)
+  - Locking symfony/service-contracts (v3.5.0)
+  - Locking symfony/string (v7.0.7)
+  - Locking symfony/translation (v7.0.7)
+  - Locking symfony/translation-contracts (v3.5.0)
+  - Locking voku/portable-ascii (2.0.1)
+Writing lock file
+Installing dependencies from lock file (including require-dev)
+Package operations: 30 installs, 0 updates, 0 removals
+  - Downloading doctrine/inflector (2.0.10)
+  - Downloading illuminate/conditionable (v11.7.0)
+  - Downloading psr/simple-cache (3.0.0)
+  - Downloading psr/container (2.0.2)
+  - Downloading illuminate/contracts (v11.7.0)
+  - Downloading illuminate/macroable (v11.7.0)
+  - Downloading symfony/process (v7.0.7)
+  - Downloading symfony/polyfill-mbstring (v1.29.0)
+  - Downloading symfony/polyfill-intl-normalizer (v1.29.0)
+  - Downloading symfony/polyfill-intl-grapheme (v1.29.0)
+  - Downloading symfony/polyfill-ctype (v1.29.0)
+  - Downloading symfony/string (v7.0.7)
+  - Downloading symfony/deprecation-contracts (v3.5.0)
+  - Downloading symfony/service-contracts (v3.5.0)
+  - Downloading symfony/console (v7.0.7)
+  - Downloading illuminate/collections (v11.7.0)
+  - Downloading laravel/prompts (v0.1.21)
+  - Downloading voku/portable-ascii (2.0.1)
+  - Downloading symfony/translation-contracts (v3.5.0)
+  - Downloading symfony/translation (v7.0.7)
+  - Downloading symfony/polyfill-php80 (v1.29.0)
+  - Downloading symfony/polyfill-php83 (v1.29.0)
+  - Downloading psr/clock (1.0.0)
+  - Downloading symfony/clock (v7.0.7)
+  - Downloading carbonphp/carbon-doctrine-types (3.2.0)
+  - Downloading nesbot/carbon (3.3.1)
+  - Downloading illuminate/support (v11.7.0)
+  - Downloading symfony/finder (v7.0.7)
+  - Downloading illuminate/filesystem (v11.7.0)
+  - Downloading laravel/installer (v5.8.0)
+  - Installing doctrine/inflector (2.0.10): Extracting archive
+  - Installing illuminate/conditionable (v11.7.0): Extracting archive
+  - Installing psr/simple-cache (3.0.0): Extracting archive
+  - Installing psr/container (2.0.2): Extracting archive
+  - Installing illuminate/contracts (v11.7.0): Extracting archive
+  - Installing illuminate/macroable (v11.7.0): Extracting archive
+  - Installing symfony/process (v7.0.7): Extracting archive
+  - Installing symfony/polyfill-mbstring (v1.29.0): Extracting archive
+  - Installing symfony/polyfill-intl-normalizer (v1.29.0): Extracting archive
+  - Installing symfony/polyfill-intl-grapheme (v1.29.0): Extracting archive
+  - Installing symfony/polyfill-ctype (v1.29.0): Extracting archive
+  - Installing symfony/string (v7.0.7): Extracting archive
+  - Installing symfony/deprecation-contracts (v3.5.0): Extracting archive
+  - Installing symfony/service-contracts (v3.5.0): Extracting archive
+  - Installing symfony/console (v7.0.7): Extracting archive
+  - Installing illuminate/collections (v11.7.0): Extracting archive
+  - Installing laravel/prompts (v0.1.21): Extracting archive
+  - Installing voku/portable-ascii (2.0.1): Extracting archive
+  - Installing symfony/translation-contracts (v3.5.0): Extracting archive
+  - Installing symfony/translation (v7.0.7): Extracting archive
+  - Installing symfony/polyfill-php80 (v1.29.0): Extracting archive
+  - Installing symfony/polyfill-php83 (v1.29.0): Extracting archive
+  - Installing psr/clock (1.0.0): Extracting archive
+  - Installing symfony/clock (v7.0.7): Extracting archive
+  - Installing carbonphp/carbon-doctrine-types (3.2.0): Extracting archive
+  - Installing nesbot/carbon (3.3.1): Extracting archive
+  - Installing illuminate/support (v11.7.0): Extracting archive
+  - Installing symfony/finder (v7.0.7): Extracting archive
+  - Installing illuminate/filesystem (v11.7.0): Extracting archive
+  - Installing laravel/installer (v5.8.0): Extracting archive
+17 package suggestions were added by new dependencies, use `composer suggest` to see details.
+Generating autoload files
+19 packages you are using are looking for funding.
+Use the `composer fund` command to find out more!
+No security vulnerability advisories found.
+Using version ^5.8 for laravel/installer
+kyotaro_IAM:~/environment/framework $ composer create-project laravel/laravel --prefer-dist blog "10.*"                                                 
+Creating a "laravel/laravel" project at "./blog"
+Installing laravel/laravel (v10.3.3)
+  - Downloading laravel/laravel (v10.3.3)
+  - Installing laravel/laravel (v10.3.3): Extracting archive
+Created project in /home/ec2-user/environment/framework/blog
+> @php -r "file_exists('.env') || copy('.env.example', '.env');"
+Loading composer repositories with package information
+Updating dependencies
+Lock file operations: 111 installs, 0 updates, 0 removals
+  - Locking brick/math (0.12.1)
+  - Locking carbonphp/carbon-doctrine-types (2.1.0)
+  - Locking dflydev/dot-access-data (v3.0.2)
+  - Locking doctrine/inflector (2.0.10)
+  - Locking doctrine/lexer (3.0.1)
+  - Locking dragonmantank/cron-expression (v3.3.3)
+  - Locking egulias/email-validator (4.0.2)
+  - Locking fakerphp/faker (v1.23.1)
+  - Locking filp/whoops (2.15.4)
+  - Locking fruitcake/php-cors (v1.3.0)
+  - Locking graham-campbell/result-type (v1.1.2)
+  - Locking guzzlehttp/guzzle (7.8.1)
+  - Locking guzzlehttp/promises (2.0.2)
+  - Locking guzzlehttp/psr7 (2.6.2)
+  - Locking guzzlehttp/uri-template (v1.0.3)
+  - Locking hamcrest/hamcrest-php (v2.0.1)
+  - Locking laravel/framework (v10.48.10)
+  - Locking laravel/pint (v1.15.3)
+  - Locking laravel/prompts (v0.1.21)
+  - Locking laravel/sail (v1.29.1)
+  - Locking laravel/sanctum (v3.3.3)
+  - Locking laravel/serializable-closure (v1.3.3)
+  - Locking laravel/tinker (v2.9.0)
+  - Locking league/commonmark (2.4.2)
+  - Locking league/config (v1.2.0)
+  - Locking league/flysystem (3.27.0)
+  - Locking league/flysystem-local (3.25.1)
+  - Locking league/mime-type-detection (1.15.0)
+  - Locking mockery/mockery (1.6.11)
+  - Locking monolog/monolog (3.6.0)
+  - Locking myclabs/deep-copy (1.11.1)
+  - Locking nesbot/carbon (2.72.3)
+  - Locking nette/schema (v1.3.0)
+  - Locking nette/utils (v4.0.4)
+  - Locking nikic/php-parser (v5.0.2)
+  - Locking nunomaduro/collision (v7.10.0)
+  - Locking nunomaduro/termwind (v1.15.1)
+  - Locking phar-io/manifest (2.0.4)
+  - Locking phar-io/version (3.2.1)
+  - Locking phpoption/phpoption (1.9.2)
+  - Locking phpunit/php-code-coverage (10.1.14)
+  - Locking phpunit/php-file-iterator (4.1.0)
+  - Locking phpunit/php-invoker (4.0.0)
+  - Locking phpunit/php-text-template (3.0.1)
+  - Locking phpunit/php-timer (6.0.0)
+  - Locking phpunit/phpunit (10.5.20)
+  - Locking psr/clock (1.0.0)
+  - Locking psr/container (2.0.2)
+  - Locking psr/event-dispatcher (1.0.0)
+  - Locking psr/http-client (1.0.3)
+  - Locking psr/http-factory (1.0.2)
+  - Locking psr/http-message (2.0)
+  - Locking psr/log (3.0.0)
+  - Locking psr/simple-cache (3.0.0)
+  - Locking psy/psysh (v0.12.3)
+  - Locking ralouphie/getallheaders (3.0.3)
+  - Locking ramsey/collection (2.0.0)
+  - Locking ramsey/uuid (4.7.6)
+  - Locking sebastian/cli-parser (2.0.1)
+  - Locking sebastian/code-unit (2.0.0)
+  - Locking sebastian/code-unit-reverse-lookup (3.0.0)
+  - Locking sebastian/comparator (5.0.1)
+  - Locking sebastian/complexity (3.2.0)
+  - Locking sebastian/diff (5.1.1)
+  - Locking sebastian/environment (6.1.0)
+  - Locking sebastian/exporter (5.1.2)
+  - Locking sebastian/global-state (6.0.2)
+  - Locking sebastian/lines-of-code (2.0.2)
+  - Locking sebastian/object-enumerator (5.0.0)
+  - Locking sebastian/object-reflector (3.0.0)
+  - Locking sebastian/recursion-context (5.0.0)
+  - Locking sebastian/type (4.0.0)
+  - Locking sebastian/version (4.0.1)
+  - Locking spatie/backtrace (1.6.1)
+  - Locking spatie/flare-client-php (1.5.1)
+  - Locking spatie/ignition (1.14.1)
+  - Locking spatie/laravel-ignition (2.7.0)
+  - Locking symfony/console (v6.4.7)
+  - Locking symfony/css-selector (v7.0.7)
+  - Locking symfony/deprecation-contracts (v3.5.0)
+  - Locking symfony/error-handler (v6.4.7)
+  - Locking symfony/event-dispatcher (v7.0.7)
+  - Locking symfony/event-dispatcher-contracts (v3.5.0)
+  - Locking symfony/finder (v6.4.7)
+  - Locking symfony/http-foundation (v6.4.7)
+  - Locking symfony/http-kernel (v6.4.7)
+  - Locking symfony/mailer (v6.4.7)
+  - Locking symfony/mime (v6.4.7)
+  - Locking symfony/polyfill-ctype (v1.29.0)
+  - Locking symfony/polyfill-intl-grapheme (v1.29.0)
+  - Locking symfony/polyfill-intl-idn (v1.29.0)
+  - Locking symfony/polyfill-intl-normalizer (v1.29.0)
+  - Locking symfony/polyfill-mbstring (v1.29.0)
+  - Locking symfony/polyfill-php72 (v1.29.0)
+  - Locking symfony/polyfill-php80 (v1.29.0)
+  - Locking symfony/polyfill-php83 (v1.29.0)
+  - Locking symfony/polyfill-uuid (v1.29.0)
+  - Locking symfony/process (v6.4.7)
+  - Locking symfony/routing (v6.4.7)
+  - Locking symfony/service-contracts (v3.5.0)
+  - Locking symfony/string (v7.0.7)
+  - Locking symfony/translation (v6.4.7)
+  - Locking symfony/translation-contracts (v3.5.0)
+  - Locking symfony/uid (v6.4.7)
+  - Locking symfony/var-dumper (v6.4.7)
+  - Locking symfony/yaml (v7.0.7)
+  - Locking theseer/tokenizer (1.2.3)
+  - Locking tijsverkoyen/css-to-inline-styles (v2.2.7)
+  - Locking vlucas/phpdotenv (v5.6.0)
+  - Locking voku/portable-ascii (2.0.1)
+  - Locking webmozart/assert (1.11.0)
+Writing lock file
+Installing dependencies from lock file (including require-dev)
+Package operations: 111 installs, 0 updates, 0 removals
+  - Downloading doctrine/lexer (3.0.1)
+  - Downloading webmozart/assert (1.11.0)
+  - Downloading dragonmantank/cron-expression (v3.3.3)
+  - Downloading fakerphp/faker (v1.23.1)
+  - Downloading symfony/http-foundation (v6.4.7)
+  - Downloading fruitcake/php-cors (v1.3.0)
+  - Downloading psr/http-message (2.0)
+  - Downloading psr/http-client (1.0.3)
+  - Downloading ralouphie/getallheaders (3.0.3)
+  - Downloading psr/http-factory (1.0.2)
+  - Downloading guzzlehttp/psr7 (2.6.2)
+  - Downloading guzzlehttp/promises (2.0.2)
+  - Downloading guzzlehttp/guzzle (7.8.1)
+  - Downloading guzzlehttp/uri-template (v1.0.3)
+  - Downloading laravel/pint (v1.15.3)
+  - Downloading symfony/console (v6.4.7)
+  - Downloading phpoption/phpoption (1.9.2)
+  - Downloading graham-campbell/result-type (v1.1.2)
+  - Downloading vlucas/phpdotenv (v5.6.0)
+  - Downloading symfony/css-selector (v7.0.7)
+  - Downloading tijsverkoyen/css-to-inline-styles (v2.2.7)
+  - Downloading symfony/var-dumper (v6.4.7)
+  - Downloading symfony/polyfill-uuid (v1.29.0)
+  - Downloading symfony/uid (v6.4.7)
+  - Downloading symfony/routing (v6.4.7)
+  - Downloading symfony/process (v6.4.7)
+  - Downloading symfony/polyfill-php72 (v1.29.0)
+  - Downloading symfony/polyfill-intl-idn (v1.29.0)
+  - Downloading symfony/mime (v6.4.7)
+  - Downloading psr/event-dispatcher (1.0.0)
+  - Downloading symfony/event-dispatcher-contracts (v3.5.0)
+  - Downloading symfony/event-dispatcher (v7.0.7)
+  - Downloading psr/log (3.0.0)
+  - Downloading egulias/email-validator (4.0.2)
+  - Downloading symfony/mailer (v6.4.7)
+  - Downloading symfony/error-handler (v6.4.7)
+  - Downloading symfony/http-kernel (v6.4.7)
+  - Downloading symfony/finder (v6.4.7)
+  - Downloading ramsey/collection (2.0.0)
+  - Downloading brick/math (0.12.1)
+  - Downloading ramsey/uuid (4.7.6)
+  - Downloading nunomaduro/termwind (v1.15.1)
+  - Downloading symfony/translation (v6.4.7)
+  - Downloading carbonphp/carbon-doctrine-types (2.1.0)
+  - Downloading nesbot/carbon (2.72.3)
+  - Downloading monolog/monolog (3.6.0)
+  - Downloading league/mime-type-detection (1.15.0)
+  - Downloading league/flysystem (3.27.0)
+  - Downloading league/flysystem-local (3.25.1)
+  - Downloading nette/utils (v4.0.4)
+  - Downloading nette/schema (v1.3.0)
+  - Downloading dflydev/dot-access-data (v3.0.2)
+  - Downloading league/config (v1.2.0)
+  - Downloading league/commonmark (2.4.2)
+  - Downloading laravel/serializable-closure (v1.3.3)
+  - Downloading laravel/framework (v10.48.10)
+  - Downloading symfony/yaml (v7.0.7)
+  - Downloading laravel/sail (v1.29.1)
+  - Downloading laravel/sanctum (v3.3.3)
+  - Downloading nikic/php-parser (v5.0.2)
+  - Downloading psy/psysh (v0.12.3)
+  - Downloading laravel/tinker (v2.9.0)
+  - Downloading hamcrest/hamcrest-php (v2.0.1)
+  - Downloading mockery/mockery (1.6.11)
+  - Downloading filp/whoops (2.15.4)
+  - Downloading nunomaduro/collision (v7.10.0)
+  - Downloading sebastian/version (4.0.1)
+  - Downloading sebastian/type (4.0.0)
+  - Downloading sebastian/recursion-context (5.0.0)
+  - Downloading sebastian/object-reflector (3.0.0)
+  - Downloading sebastian/object-enumerator (5.0.0)
+  - Downloading sebastian/global-state (6.0.2)
+  - Downloading sebastian/exporter (5.1.2)
+  - Downloading sebastian/environment (6.1.0)
+  - Downloading sebastian/diff (5.1.1)
+  - Downloading sebastian/comparator (5.0.1)
+  - Downloading sebastian/code-unit (2.0.0)
+  - Downloading sebastian/cli-parser (2.0.1)
+  - Downloading phpunit/php-timer (6.0.0)
+  - Downloading phpunit/php-text-template (3.0.1)
+  - Downloading phpunit/php-invoker (4.0.0)
+  - Downloading phpunit/php-file-iterator (4.1.0)
+  - Downloading theseer/tokenizer (1.2.3)
+  - Downloading sebastian/lines-of-code (2.0.2)
+  - Downloading sebastian/complexity (3.2.0)
+  - Downloading sebastian/code-unit-reverse-lookup (3.0.0)
+  - Downloading phpunit/php-code-coverage (10.1.14)
+  - Downloading phar-io/version (3.2.1)
+  - Downloading phar-io/manifest (2.0.4)
+  - Downloading myclabs/deep-copy (1.11.1)
+  - Downloading phpunit/phpunit (10.5.20)
+  - Downloading spatie/backtrace (1.6.1)
+  - Downloading spatie/flare-client-php (1.5.1)
+  - Downloading spatie/ignition (1.14.1)
+  - Downloading spatie/laravel-ignition (2.7.0)
+  - Installing doctrine/inflector (2.0.10): Extracting archive
+  - Installing doctrine/lexer (3.0.1): Extracting archive
+  - Installing symfony/polyfill-ctype (v1.29.0): Extracting archive
+  - Installing webmozart/assert (1.11.0): Extracting archive
+  - Installing dragonmantank/cron-expression (v3.3.3): Extracting archive
+  - Installing symfony/deprecation-contracts (v3.5.0): Extracting archive
+  - Installing psr/container (2.0.2): Extracting archive
+  - Installing fakerphp/faker (v1.23.1): Extracting archive
+  - Installing symfony/polyfill-php80 (v1.29.0): Extracting archive
+  - Installing symfony/polyfill-php83 (v1.29.0): Extracting archive
+  - Installing symfony/polyfill-mbstring (v1.29.0): Extracting archive
+  - Installing symfony/http-foundation (v6.4.7): Extracting archive
+  - Installing fruitcake/php-cors (v1.3.0): Extracting archive
+  - Installing psr/http-message (2.0): Extracting archive
+  - Installing psr/http-client (1.0.3): Extracting archive
+  - Installing ralouphie/getallheaders (3.0.3): Extracting archive
+  - Installing psr/http-factory (1.0.2): Extracting archive
+  - Installing guzzlehttp/psr7 (2.6.2): Extracting archive
+  - Installing guzzlehttp/promises (2.0.2): Extracting archive
+  - Installing guzzlehttp/guzzle (7.8.1): Extracting archive
+  - Installing guzzlehttp/uri-template (v1.0.3): Extracting archive
+  - Installing laravel/pint (v1.15.3): Extracting archive
+  - Installing symfony/polyfill-intl-normalizer (v1.29.0): Extracting archive
+  - Installing symfony/polyfill-intl-grapheme (v1.29.0): Extracting archive
+  - Installing symfony/string (v7.0.7): Extracting archive
+  - Installing symfony/service-contracts (v3.5.0): Extracting archive
+  - Installing symfony/console (v6.4.7): Extracting archive
+  - Installing voku/portable-ascii (2.0.1): Extracting archive
+  - Installing phpoption/phpoption (1.9.2): Extracting archive
+  - Installing graham-campbell/result-type (v1.1.2): Extracting archive
+  - Installing vlucas/phpdotenv (v5.6.0): Extracting archive
+  - Installing symfony/css-selector (v7.0.7): Extracting archive
+  - Installing tijsverkoyen/css-to-inline-styles (v2.2.7): Extracting archive
+  - Installing symfony/var-dumper (v6.4.7): Extracting archive
+  - Installing symfony/polyfill-uuid (v1.29.0): Extracting archive
+  - Installing symfony/uid (v6.4.7): Extracting archive
+  - Installing symfony/routing (v6.4.7): Extracting archive
+  - Installing symfony/process (v6.4.7): Extracting archive
+  - Installing symfony/polyfill-php72 (v1.29.0): Extracting archive
+  - Installing symfony/polyfill-intl-idn (v1.29.0): Extracting archive
+  - Installing symfony/mime (v6.4.7): Extracting archive
+  - Installing psr/event-dispatcher (1.0.0): Extracting archive
+  - Installing symfony/event-dispatcher-contracts (v3.5.0): Extracting archive
+  - Installing symfony/event-dispatcher (v7.0.7): Extracting archive
+  - Installing psr/log (3.0.0): Extracting archive
+  - Installing egulias/email-validator (4.0.2): Extracting archive
+  - Installing symfony/mailer (v6.4.7): Extracting archive
+  - Installing symfony/error-handler (v6.4.7): Extracting archive
+  - Installing symfony/http-kernel (v6.4.7): Extracting archive
+  - Installing symfony/finder (v6.4.7): Extracting archive
+  - Installing ramsey/collection (2.0.0): Extracting archive
+  - Installing brick/math (0.12.1): Extracting archive
+  - Installing ramsey/uuid (4.7.6): Extracting archive
+  - Installing psr/simple-cache (3.0.0): Extracting archive
+  - Installing nunomaduro/termwind (v1.15.1): Extracting archive
+  - Installing symfony/translation-contracts (v3.5.0): Extracting archive
+  - Installing symfony/translation (v6.4.7): Extracting archive
+  - Installing psr/clock (1.0.0): Extracting archive
+  - Installing carbonphp/carbon-doctrine-types (2.1.0): Extracting archive
+  - Installing nesbot/carbon (2.72.3): Extracting archive
+  - Installing monolog/monolog (3.6.0): Extracting archive
+  - Installing league/mime-type-detection (1.15.0): Extracting archive
+  - Installing league/flysystem (3.27.0): Extracting archive
+  - Installing league/flysystem-local (3.25.1): Extracting archive
+  - Installing nette/utils (v4.0.4): Extracting archive
+  - Installing nette/schema (v1.3.0): Extracting archive
+  - Installing dflydev/dot-access-data (v3.0.2): Extracting archive
+  - Installing league/config (v1.2.0): Extracting archive
+  - Installing league/commonmark (2.4.2): Extracting archive
+  - Installing laravel/serializable-closure (v1.3.3): Extracting archive
+  - Installing laravel/prompts (v0.1.21): Extracting archive
+  - Installing laravel/framework (v10.48.10): Extracting archive
+  - Installing symfony/yaml (v7.0.7): Extracting archive
+  - Installing laravel/sail (v1.29.1): Extracting archive
+  - Installing laravel/sanctum (v3.3.3): Extracting archive
+  - Installing nikic/php-parser (v5.0.2): Extracting archive
+  - Installing psy/psysh (v0.12.3): Extracting archive
+  - Installing laravel/tinker (v2.9.0): Extracting archive
+  - Installing hamcrest/hamcrest-php (v2.0.1): Extracting archive
+  - Installing mockery/mockery (1.6.11): Extracting archive
+  - Installing filp/whoops (2.15.4): Extracting archive
+  - Installing nunomaduro/collision (v7.10.0): Extracting archive
+  - Installing sebastian/version (4.0.1): Extracting archive
+  - Installing sebastian/type (4.0.0): Extracting archive
+  - Installing sebastian/recursion-context (5.0.0): Extracting archive
+  - Installing sebastian/object-reflector (3.0.0): Extracting archive
+  - Installing sebastian/object-enumerator (5.0.0): Extracting archive
+  - Installing sebastian/global-state (6.0.2): Extracting archive
+  - Installing sebastian/exporter (5.1.2): Extracting archive
+  - Installing sebastian/environment (6.1.0): Extracting archive
+  - Installing sebastian/diff (5.1.1): Extracting archive
+  - Installing sebastian/comparator (5.0.1): Extracting archive
+  - Installing sebastian/code-unit (2.0.0): Extracting archive
+  - Installing sebastian/cli-parser (2.0.1): Extracting archive
+  - Installing phpunit/php-timer (6.0.0): Extracting archive
+  - Installing phpunit/php-text-template (3.0.1): Extracting archive
+  - Installing phpunit/php-invoker (4.0.0): Extracting archive
+  - Installing phpunit/php-file-iterator (4.1.0): Extracting archive
+  - Installing theseer/tokenizer (1.2.3): Extracting archive
+  - Installing sebastian/lines-of-code (2.0.2): Extracting archive
+  - Installing sebastian/complexity (3.2.0): Extracting archive
+  - Installing sebastian/code-unit-reverse-lookup (3.0.0): Extracting archive
+  - Installing phpunit/php-code-coverage (10.1.14): Extracting archive
+  - Installing phar-io/version (3.2.1): Extracting archive
+  - Installing phar-io/manifest (2.0.4): Extracting archive
+  - Installing myclabs/deep-copy (1.11.1): Extracting archive
+  - Installing phpunit/phpunit (10.5.20): Extracting archive
+  - Installing spatie/backtrace (1.6.1): Extracting archive
+  - Installing spatie/flare-client-php (1.5.1): Extracting archive
+  - Installing spatie/ignition (1.14.1): Extracting archive
+  - Installing spatie/laravel-ignition (2.7.0): Extracting archive
+54 package suggestions were added by new dependencies, use `composer suggest` to see details.
+Generating optimized autoload files
+> Illuminate\Foundation\ComposerScripts::postAutoloadDump
+> @php artisan package:discover --ansi
+
+   INFO  Discovering packages.  
+
+  laravel/sail ................................................................................................................................ DONE
+  laravel/sanctum ............................................................................................................................. DONE
+  laravel/tinker .............................................................................................................................. DONE
+  nesbot/carbon ............................................................................................................................... DONE
+  nunomaduro/collision ........................................................................................................................ DONE
+  nunomaduro/termwind ......................................................................................................................... DONE
+  spatie/laravel-ignition ..................................................................................................................... DONE
+
+84 packages you are using are looking for funding.
+Use the `composer fund` command to find out more!
+> @php artisan vendor:publish --tag=laravel-assets --ansi --force
+
+   INFO  No publishable resources for tag [laravel-assets].  
+
+No security vulnerability advisories found.
+> @php artisan key:generate --ansi
+
+   INFO  Application key set successfully.  
+
+kyotaro_IAM:~/environment/framework $ cd blog
+kyotaro_IAM:~/environment/framework/blog $ php artisan --version
+Laravel Framework 10.48.10
+kyotaro_IAM:~/environment/framework/blog $ php artisan serve
+
+   INFO  Server running on [http://127.0.0.1:8000].  
+
+  Press Ctrl+C to stop the server
+
+^Ckyotaro_IAM:~/environment/framework/blog $ php artisan -version
+
+In ArgvInput.php line 125:
+                                                          
+  [Symfony\Component\Console\Exception\RuntimeException]  
+  The "-e" option does not exist.                         
+                                                          
+
+Exception trace:
+  at /home/ec2-user/environment/framework/blog/vendor/symfony/console/Input/ArgvInput.php:125
+ Symfony\Component\Console\Input\ArgvInput->parseShortOptionSet() at /home/ec2-user/environment/framework/blog/vendor/symfony/console/Input/ArgvInput.php:107
+ Symfony\Component\Console\Input\ArgvInput->parseShortOption() at /home/ec2-user/environment/framework/blog/vendor/symfony/console/Input/ArgvInput.php:87
+ Symfony\Component\Console\Input\ArgvInput->parseToken() at /home/ec2-user/environment/framework/blog/vendor/symfony/console/Input/ArgvInput.php:74
+ Symfony\Component\Console\Input\ArgvInput->parse() at /home/ec2-user/environment/framework/blog/vendor/symfony/console/Input/Input.php:56
+ Symfony\Component\Console\Input\Input->bind() at /home/ec2-user/environment/framework/blog/vendor/symfony/console/Command/Command.php:285
+ Symfony\Component\Console\Command\Command->run() at /home/ec2-user/environment/framework/blog/vendor/symfony/console/Application.php:1096
+ Symfony\Component\Console\Application->doRunCommand() at /home/ec2-user/environment/framework/blog/vendor/symfony/console/Application.php:324
+ Symfony\Component\Console\Application->doRun() at /home/ec2-user/environment/framework/blog/vendor/symfony/console/Application.php:175
+ Symfony\Component\Console\Application->run() at /home/ec2-user/environment/framework/blog/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php:201
+ Illuminate\Foundation\Console\Kernel->handle() at /home/ec2-user/environment/framework/blog/artisan:35
+
+kyotaro_IAM:~/environment/framework/blog $ php artisan serve --port=80
+
+   WARN  Failed to listen on 127.0.0.1:80 (reason: Permission denied).  
+
+kyotaro_IAM:~/environment/framework/blog $ php artisan serve --port=8080
+
+   INFO  Server running on [http://127.0.0.1:8080].  
+
+  Press Ctrl+C to stop the server
+
+^Ckyotaro_IAM:~/environment/framework/blog $ php artisan serve --port=8080
+
+   INFO  Server running on [http://127.0.0.1:8080].  
+
+  Press Ctrl+C to stop the server
