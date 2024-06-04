@@ -20,6 +20,6 @@ public function getPaginateByLimit(int $limit_count = 10)
 }
 protected $fillable = [
     'title',
-    'body'
+    'body',
     ];
 }
