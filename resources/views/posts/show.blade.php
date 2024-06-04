@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_','-',app()->getLocale()) }}">
+<html lang="{{ str_replace('_','-', app()->getLocale()) }}">
 <head>
     <meta charset="UTF-8">
      <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -16,8 +16,11 @@
             <p>{{ $post->body }}</p>
         </div>
     </div>
+    <div class="edit">
+        <a href="/posts/{{ $post->id }}/edit">edit</a>
+    </div>
     <div class='footer'>
-        <a href="/posts">戻る</a>
+        <a href="/">back</a>
     </div>
 </body>
 </html>
