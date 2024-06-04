@@ -17,7 +17,7 @@
              </div>
              <div class='content_body'>
         <h2>Body</h2>
-        <textarea name='post[body]'  value="{{ old('$post->body') }}"></textarea>
+        <textarea name='post[body]' >{{ $post->body }}</textarea>
         <p class='title__body' style="color:red">{{ $errors->first('post.body') }}</p>
             </div>
         <input type='submit' value='update'>
