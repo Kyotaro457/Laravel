@@ -19,6 +19,7 @@
                 <button type="button" onclick="deletePost({{ $post->id }})">delete</button> 
             </form>
             <a href="/categories/{{ $post->category->id }}">{{ $post->category->name }}</a>
+            <p></p>
         </div>
         @endforeach
     </div>
