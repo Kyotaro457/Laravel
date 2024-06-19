@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Blog</title>
 </head>
+<x-app-layout>
 <body>
     <h1 class='title'></h1>
     <div class='content'>
@@ -27,4 +28,5 @@
     </div>
     </div>
 </body>
+</x-app-layout>
 </html>
