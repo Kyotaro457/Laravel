@@ -5,8 +5,11 @@
     <title>Blog</title>
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
 </head>
+<x-app-layout>
 <body class="antialised">
     <h1>Blog Name</h1>
+        <p>ログインユーザー：{{ Auth::user()->name }}</p>
+        <br>
         <a href='/posts/create'>create</a>
     <div class='posts'> 
       @foreach ($posts as $post)
@@ -20,6 +23,7 @@
             </form>
             <a href="/categories/{{ $post->category->id }}">{{ $post->category->name }}</a>
         </div>
+        <br>
         @endforeach
     </div>
     <div class='paginate'>
@@ -35,4 +39,5 @@
         }
     </script>
 </body>
+</x-app-layout>
 </html>
